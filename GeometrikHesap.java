@@ -2,7 +2,7 @@
  * Ad Soyad: [ALİ İSTANBULLU]
  * Ogrenci No: [250542019]
  * Tarih: [25.10.2025]
- * Aciklama: Gorev 1 - Geometrik Hesaplama Sistemi
+ * Aciklama: Gorev 2 - Geometrik Hesaplama Sistemi
  * 
  * Bu program kullanicidan ogrenci bilgilerini alir ve
  * duzenli bir formatta ekrana yazdirir.
