@@ -1,7 +1,7 @@
 /*
  * Ad Soyad: [ALİ İSTANBULLU]
  * Ogrenci No: [250542019]
- * Tarih: [25.10.2025]
+ * Tarih: [26.10.2025]
  * Aciklama: Gorev 3 - Maas Hesaplama Sistemi
  * 
  * Bu program kullanicidan ogrenci bilgilerini alir ve
@@ -49,6 +49,8 @@ public class MaasHesap {
          double damgaakaesintisi = toplamGelir*DAMGA_VERGISI_ORANI;
          double toplamKesinti = gelirKesintisi+damgaakaesintisi+sgkKesinti;
          double netMaas = toplamGelir-toplamKesinti;
+         double kesintiOrani  =(toplamKesinti/toplamGelir)*100;
+         double günlükMaas = netMaas/aylikÇalişmaGünü;
 
 
         
@@ -60,18 +62,20 @@ public class MaasHesap {
           System.out.println("=============================");
           System.out.println("Çalişan = "+ad+" "+soyad);
           System.out.println("\nGELİRLER =");
-          System.out.printf("  Brüt Maaş              = %.3f TL ",brutMaas);
-          System.out.printf("\n  Mesai Ücreti (%d saat) = %.3f TL",mesaiSaati,mesaiUcreti);
+          System.out.printf("  Brüt Maaş               = %.2f TL ",brutMaas);
+          System.out.printf("\n  Mesai Ücreti (%d saat)  = %.2f TL",mesaiSaati,mesaiUcreti);
           System.out.println("\n------------------------------");
-          System.out.printf("  TOPLAM GELİR           = %.3f TL",toplamGelir);
+          System.out.printf("  TOPLAM GELİR            = %.2f TL",toplamGelir);
           System.out.println("\n\nKESİNTİLER =");
-          System.out.printf("  SGK Kesinti (14.0)     = %.3f TL",sgkKesinti);
-          System.out.printf("\n  Gelir Vergisi (15.0)   = %.3f TL",gelirKesintisi);
-          System.out.printf("\n  Damga  Vergisi (0.8)   = %.3f TL",damgaakaesintisi);
-          System.out.println("\n------------------------------");
-          System.out.printf("TOPLAM KESİNTİ           = %.3f TL ",toplamKesinti);
-          System.out.printf("\nNET MAAŞ                 = %.3f TL",netMaas);
-
+          System.out.printf("  SGK Kesinti (14.0%%)     = %.2f TL",sgkKesinti);
+          System.out.printf("\n  Gelir Vergisi (15.0%%)   = %.2f TL",gelirKesintisi);
+          System.out.printf("\n  Damga  Vergisi (0.8%%)   = %.2f TL",damgaakaesintisi);
+          System.out.println("\n---------------------------------------");
+          System.out.printf("TOPLAM KESİNTİ            = %.2f TL ",toplamKesinti);
+          System.out.printf("\nNET MAAŞ                  = %.2f TL",netMaas);
+          System.out.printf("\nToplan Kesinti Orani      = %.1f %%",kesintiOrani);
+          System.out.printf("\nGünlük Maaş               = %.2f",günlükMaas);
+          System.out.println("\n=========================================");
           input.close();
 
         
